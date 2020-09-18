@@ -59,8 +59,8 @@ class LoginScreenSuccess(Screen):
             with open(f'quotes/{feel}.txt') as file:
                 quotes = file.readlines()
             self.ids.quote.text = random.choice(quotes)
-            # print(quotes)
-        # print(available_feelings)
+        else:
+            self.ids.quote.text = "Try another feeling"
 
 
 class MainApp(App):
